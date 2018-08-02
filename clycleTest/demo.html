@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<!-- 让国内基于webkit的浏览器默认采用webkit内核进行渲染 -->
+	<meta name="renderer" content="webkit" />
+	<meta content="JS中几种常用数组遍历方式分析比较,包括for循环,for in，foreach，map法等" name="description">
+	<title>Js中几种常用数组遍历方式分析比较</title>
+	<link rel="stylesheet" href="./demo.css" />
+</head>
+
+<body>
+	<div class="markdown-body">
+		<div class="title-container">
+			<h1>Js中几种常用数组遍历方式分析比较</h1>
+			<div class="attention-tions">
+
+			</div>
+		</div>
+
+		<div class="runner-container">
+			<div class="select-container">
+				<span class="ml10 hide">当前分析模式:</span>
+				<select class="exchange-type hide">
+
+					<option value="loopCompare">循环方式对比</option>
+				</select>
+				<select class="es6-support hide">
+					<option value="noes6">不支持es6</option>
+					<option value="es6">支持es6</option>
+				</select>
+				<div class="hide">
+					<span class="ml10">每次计算次数:</span>
+					<input id="per-run-count" type="number" placeholder="执行次数" value="1000000" />
+				</div>
+				<div class="">
+					<span class="ml10">一共执行循环:</span>
+					<input id="all-loop-count" type="number" placeholder="执行循环" value="100" />
+				</div>
+
+				<button id="btn-run" class="text-btn">执行测试</button>
+			</div>
+
+			<table id="test-table">
+				<caption></caption>
+				<thead>
+					<tr>
+						<th colspan="3">
+							<span class="block ">
+								代码前提:
+							</span>
+							<pre>
+									<code >
+										<span id="pre-code-tips" class="block">
+											
+										</span>
+									</code>
+								</pre>
+						</th>
+					</tr>
+					<tr class="title">
+						<th colspan="2">测试代码</th>
+						<th>性能分析</th>
+					</tr>
+
+				</thead>
+				<tbody id="run-code-content">
+
+				</tbody>
+			</table>
+		</div>
+
+		<script type="text/javascript" src="./app.js"></script>
+		<script type="text/javascript" src="./performaceAnalysisLitemlate.js"></script>
+		<script type="text/javascript" src="./jsarrayGoThrough.js"></script>
+</body>
+
+</html>
