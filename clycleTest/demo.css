@@ -23,7 +23,10 @@ body {
 	margin: auto;
 	max-width: 100%;
 	border-spacing: 0;
-	border-collapse: collapse
+	border-collapse: collapse;
+	position: absolute;
+  right: 300px;
+  top: 100px;
 }
 .runner-container table tr,
 .runner-container table td {

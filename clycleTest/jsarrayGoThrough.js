@@ -298,7 +298,7 @@
 						};
 					},
 				},
-				//es6里的方法,暂时注释掉
+				//es6里的方法 for of 
 				"tmp_loopCompare_forof": {
 					//是否需要es6才会显示
 					"needEs6": false,
@@ -307,7 +307,7 @@
 					//显示的domID,必须唯一
 					"domId": "tmp_loopCompare_forof",
 					'name': 'for of循环执行代码<br/>',
-					"codeHtml": 'for(let value of arr) {  <br/>   <br/>});',
+					"codeHtml": 'for(const value of arr) {  <br/>   <br/>});',
 					"runCode": function(perCount, a, b, tmp, arr) {
 						//防止干扰
 						var a = a,
@@ -318,7 +318,7 @@
 							i, j, len;
 						var begin = (new Date()).getTime();
 						for(i = 0; i < perCount; i++) {
-							for(let value of arr) {}
+							for(const value of arr) {}
 						}
 						var end = (new Date()).getTime();
 						return {
@@ -331,39 +331,6 @@
 						};
 					},
 				},
-//				//es6里的方法,暂时注释掉,优化版
-//				"tmp_loopCompare_forof2": {
-//					//是否需要es6才会显示
-//					"needEs6": false,
-//					"maxCount": 10000,
-//					"supportType": "loopCompare",
-//					//显示的domID,必须唯一
-//					"domId": "tmp_loopCompare_forof2",
-//					'name': 'for of循环执行代码<br/>',
-//					"codeHtml": 'for(j of arr) {  <br/>   <br/>});',
-//					"runCode": function(perCount, a, b, tmp, arr) {
-//						//防止干扰
-//						var a = a,
-//							b = b,
-//							tmp = tmp,
-//							arr = arr,
-//							perCount = perCount,
-//							i, j, len;
-//						var begin = (new Date()).getTime();
-//						for(i = 0; i < perCount; i++) {
-//							for(j of arr) {}
-//						}
-//						var end = (new Date()).getTime();
-//						return {
-//							begin: begin,
-//							end: end,
-//							a: a,
-//							b: b,
-//							tmp: tmp,
-//							arr: arr
-//						};
-//					},
-//				},
 			};
 			return allData;
 		},
